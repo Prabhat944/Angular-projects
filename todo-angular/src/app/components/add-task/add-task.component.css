@@ -1,0 +1,38 @@
+form{
+    min-width:300px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-control{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap:5px;
+    margin-bottom: 10px;
+}
+.form-control > label{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-control > input{
+    border-radius: 3px;
+    height: 25px;
+}
+
+form > input[type='submit']{
+  width: 100%;
+  background-color: black;
+  color:#fff;
+  height: 30px;
+  min-width:300px;
+  width: 100%;
+  border-radius: 2px;
+  cursor: pointer;
+}
+form > input[type='submit']:hover{
+    transform: scaleX(1.05);
+}

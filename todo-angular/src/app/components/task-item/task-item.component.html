@@ -1,0 +1,7 @@
+<div (dblclick)="onToggle()" [ngClass]="{completed: task?.status === 'completed',pending: task?.status === 'pending',process: task?.status === 'in process'}" class="task">
+    <h3>{{task?.name}} <fa-icon (click)="onDelete()" [icon]="faTimes" [ngStyle]="{color:'red'}"></fa-icon></h3>
+    <div class="taskbody">
+        <p class="description">{{task?.description}}</p>
+        <p class="status">{{task?.status?.toUpperCase()}}</p>
+    </div>
+</div>
