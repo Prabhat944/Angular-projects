@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="app.js" ></script>
+    </head>
+    <body>
+        <h6>use username = admin and password = 123456 to login</h6>
+        <div ng-controller="LoginController">
+            <form name="loginForm" ng-submit="login()">
+              <h2>Login</h2>
+              <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" ng-model="user.username" required />
+              </div>
+              <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" ng-model="user.password" required />
+              </div>
+              <button type="submit">Login</button>
+            </form>
+            <div ng-if="loginMessage">
+                {{loginMessage}}
+            </div>
+        </div>
+    </body>
+</html>
